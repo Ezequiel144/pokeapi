@@ -16,7 +16,7 @@ function datospokemon(apidata){
     const div = document.createElement("div");
     div.classList = "card";
     div.innerHTML = `
-        <p class="idpokefont">${apidata.id}</p>  
+        <p class="idpokefont">#${apidata.id}</p>  
         <div class="contentimg">
             <img class="imgpoke" src="${apidata.sprites.other.dream_world.front_default}" alt="${apidata.name}">
         </div>
@@ -35,3 +35,4 @@ function datospokemon(apidata){
     `;
     maincontent.append(div);
 }
+

@@ -146,6 +146,18 @@ main{
     gap: 50px;
 }
 
+@media (min-width:580px) {
+    .maincontent{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:800px) {
+    .maincontent{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 .card{
     /* background-color: var(--main-color-letter); */
     border: 3px solid var(--main-color-header);
