@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace,'Open Sans', sans-serif;
+}
+:root{
+    --main-color-header:rgb(233, 233, 233);
+    --main-color-main:rgb(227, 224, 224);
+    --main-color-letter:white;
+    --main-color-numb:rgb(227, 227, 227);
+
+
+    --clic-color-poison:rgb(160,64,160);
+    --clic-color-fire:rgb(240,128,48);
+    --clic-color-water:rgb(44, 131, 253);
+    --clic-color-rock:rgb(184,160,56);
+    --clic-color-grass:rgb(120,200,80);
+    --clic-color-flying:rgb(168,144,240);
+    --clic-color-fighting:rgb(192,48,40);
+    --clic-color-ghost:rgb(112,88,152);
+    --clic-color-normal:rgb(168,168,120);
+    --clic-color-psychic:rgb(248,88,136);
+    --clic-color-ice:#77d5e3;
+    --clic-color-steel:rgb(184,184,208);
+    --clic-color-dragon:rgb(112,56,248);
+    --clic-color-bug:rgb(168,184,32);
+    --clic-color-electric:rgb(248,208,48);
+    --clic-color-dark:rgb(112,88,72);
+    --clic-color-fairy:rgb(238,153,172);
+    --clic-color-ground:rgb(224,192,104);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 30px;
+    background-color: var(--main-color-header);
+    box-shadow: 1px 3px 10px black;
+}
+
+.headercontent{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 180px;
+    padding: 0 0 30px 0;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tip{
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.5rem;
+    /* border: 1px solid red; */
+    border-radius: 100vmax;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 2px black;
+}
+
+.tip:hover{
+    transform: scale(1.2);
+    box-shadow: 1px 1px 7px 2px black;
+}
+#bug{
+    background-color: var(--clic-color-bug);
+}
+#poison{
+    background-color: var(--clic-color-poison);
+    color:var(--main-color-letter);
+}
+#grass{
+    background-color: var(--clic-color-grass);
+}
+#fire{
+    background-color: var(--clic-color-fire);
+}
+#water{
+    background-color: var(--clic-color-water);
+    color:var(--main-color-letter);
+}
+#flying{
+    background-color: var(--clic-color-flying);
+}
+#electric{
+    background-color: var(--clic-color-electric);
+}
+#fairy{
+    background-color: var(--clic-color-fairy);
+}
+#fighting{
+    background-color: var(--clic-color-fighting);
+}
+#ghost{
+    background-color: var(--clic-color-ghost);
+    color:var(--main-color-letter);
+}
+#ground{
+    background-color: var(--clic-color-ground);
+}
+#ice{
+    background-color: var(--clic-color-ice);
+}
+#normal{
+    background-color: var(--clic-color-normal);
+}
+#psychic{
+    background-color: var(--clic-color-psychic);
+}
+#rock{
+    background-color: var(--clic-color-rock);
+}
+#steel{
+    background-color: var(--clic-color-steel);
+}
+#dragon{
+    background-color: var(--clic-color-dragon);
+}
+#dark{
+    background-color: var(--clic-color-dark);
+    
+}
+
+
+main{
+    padding: 50px 30px;
+    background-color: var(--main-color); 
+}
+
+.maincontent{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* row-gap: 50px; */
+    gap: 50px;
+}
+
+.card{
+    /* background-color: var(--main-color-letter); */
+    border: 3px solid var(--main-color-header);
+    border-radius: 20px;
+    position: relative;
+    isolation: isolate;
+    padding: 20px;
+    /* margin: 20px 0; */
+}
+
+.idpokefont{
+    position: absolute;
+    font-weight: bold;
+    font-size: 11rem;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    color: var(--main-color-numb);
+}
+
+.contentimg{
+    margin: 20px auto;
+    width: 200px;
+}
+
+.imgpoke{
+    width: 100%;
+}
+
+.content_title_id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.idpoke{
+    padding: 5px 10px;
+    border-radius: 100vmax;
+    background-color: var(--main-color-numb);
+    font-weight: 700;
+}
+
+.title{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.contenttips{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+.tipos{
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 100vmax;
+    background-color: var(--clic-color-fire);
+}
+
+.contentstast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-weight: 700;
+}
+.stast{
+    padding: 5px 10px;
+    border-radius: 100vmax;
+    background-color: var(--main-color-numb);
+    font-weight: 700;
+}
