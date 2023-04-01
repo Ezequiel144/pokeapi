@@ -5,7 +5,7 @@ const pokemon = async ()=>{
     for(let i=1;i <= 151;i++){
         const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
         const data = await resp.json();
-        console.log(data);
+        /* console.log(data); */
         datospokemon(data);
     }
 }
@@ -13,6 +13,12 @@ pokemon();
 
 
 function datospokemon(apidata){
+    const type = apidata.types.map((d) => { 
+        return `<p class="tipos" id="${d.type.name}">${d.type.name}</p>`;
+    });
+    const types = type.join('');
+    console.log(types);
+
     const div = document.createElement("div");
     div.classList = "card";
     div.innerHTML = `
@@ -25,8 +31,7 @@ function datospokemon(apidata){
             <h2 class="title">${apidata.name}</h2>
         </div>
         <div class="contenttips">
-            <p class="tipos">fire</p>
-            <p class="tipos">fire</p>
+            ${types}
         </div>
         <div class="contentstast">
             <p class="stast" id="height">${apidata.height}dm</p>
@@ -34,5 +39,5 @@ function datospokemon(apidata){
         </div>
     `;
     maincontent.append(div);
+    /* console.log(apidata.types[0].type.name); */
 }
-

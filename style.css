@@ -166,6 +166,8 @@ main{
     isolation: isolate;
     padding: 20px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .idpokefont{
@@ -180,8 +182,9 @@ main{
 }
 
 .contentimg{
-    margin: 20px auto;
+    margin: auto;
     width: 200px;
+    /* border: 1px solid red; */
 }
 
 .imgpoke{
