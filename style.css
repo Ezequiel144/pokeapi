@@ -173,7 +173,7 @@ main{
 .idpokefont{
     position: absolute;
     font-weight: bold;
-    font-size: 11rem;
+    font-size: 7rem;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);

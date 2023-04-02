@@ -17,17 +17,26 @@ function datospokemon(apidata){
         return `<p class="tipos" id="${d.type.name}">${d.type.name}</p>`;
     });
     const types = type.join('');
-    console.log(types);
+    /* console.log(apidata.id.toString()); */
+    let id = apidata.id.toString();
+    console.log(id);
+    if(id.length === 1){
+        id = `00${id}`;
+        /* console.log(id); */
+    }else if(id.length === 2){
+        id = `0${id}`;
+    }
+    /* console.log(types); */
 
     const div = document.createElement("div");
     div.classList = "card";
     div.innerHTML = `
-        <p class="idpokefont">#${apidata.id}</p>  
+        <p class="idpokefont">#${id}</p>  
         <div class="contentimg">
             <img class="imgpoke" src="${apidata.sprites.other.dream_world.front_default}" alt="${apidata.name}">
         </div>
         <div class="content_title_id">
-            <p class="idpoke">${apidata.id}</p>
+            <p class="idpoke">${id}</p>
             <h2 class="title">${apidata.name}</h2>
         </div>
         <div class="contenttips">
